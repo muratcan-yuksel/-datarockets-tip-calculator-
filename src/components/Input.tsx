@@ -1,13 +1,20 @@
 import React from "react";
-import Bill from "./Bill.tsx";
+import UserInput from "./UserInput.tsx";
 import SelectTip from "./SelectTip.tsx";
 
-const Input = () => {
+type Props = {
+  bill: number;
+  people: number;
+  propType: "bill" | "people";
+};
+
+const Input = ({ bill, people }: Props) => {
   return (
     <div>
       {" "}
-      <Bill />
+      <UserInput value={bill} propType="bill" />
       <SelectTip />
+      <UserInput value={people} propType="people" />
     </div>
   );
 };

@@ -9,6 +9,7 @@ type Props = {
 const Tipbox = ({ tip, activeTip, setActiveTip }: Props) => {
   const handleClick = () => {
     setActiveTip(tip === activeTip ? null : tip);
+    console.log(tip);
   };
 
   const isActive = activeTip === tip;
