@@ -2,18 +2,15 @@ import React, { useRef, useEffect } from "react";
 import dollarIcon from "../assets/images/icon-dollar.svg";
 
 const MyInput = () => {
-  const editableDiv: React.MutableRefObject<null> = useRef(null);
-
   return (
-    // <div contentEditable={true} className="border border-s-black bg-#F3F8FB">
-    //   hey
-    //   <img src={dollarIcon} alt="dollar icon" />
-    // </div>
-
-    <div>
-      <div className="border border-s-black bg-#F3F8FB flex  items-center w-full h-10 pl-4">
+    <div className="flex flex-col items-center">
+      <h2 className="text-[#616D6D] font-bold self-start">Bill</h2>
+      <div className=" bg-[#F3F8FB] flex justify-between items-center  w-full h-10 pl-4 rounded-md">
         <img src={dollarIcon} alt="dollar icon" className="h-5" />
-        <input type="text" />
+        <input
+          className="bg-[#F3F8FB] appearance-none text-right text-[#0A4A4A] font-bold"
+          type="number"
+        />
       </div>
     </div>
   );

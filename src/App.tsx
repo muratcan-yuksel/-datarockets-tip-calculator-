@@ -1,9 +1,7 @@
 import React from "react";
 import Whiteboard from "./components/Whiteboard";
 
-type Props = {};
-
-const index = (props: Props) => {
+const index = () => {
   return (
     <div>
       hey
