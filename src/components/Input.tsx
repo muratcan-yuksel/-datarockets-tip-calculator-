@@ -10,7 +10,7 @@ type Props = {
 
 const Input = ({ bill, people }: Props) => {
   return (
-    <div>
+    <div className="">
       {" "}
       <UserInput value={bill} propType="bill" />
       <SelectTip />

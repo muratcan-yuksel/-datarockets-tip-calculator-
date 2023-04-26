@@ -24,10 +24,11 @@ const SelectTip = () => {
             setActiveTip={setActiveTip}
           />
         ))}
+        {/* custom tip  */}
         <input
           type="number"
           placeholder="Custom"
-          className="border-2 border-[#616D6D] rounded-md text-right  h-[40px] text-[#616D6D] font-bold self-start"
+          className="border-2 border-[#616D6D] rounded-md text-right mt-2 pr-2 h-[40px] text-[#616D6D] font-bold self-start"
         />
       </div>
     </div>
