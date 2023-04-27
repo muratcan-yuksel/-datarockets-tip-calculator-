@@ -57,6 +57,7 @@ const UserInput = ({ propType }: Props) => {
           className="bg-[#F3F8FB] appearance-none text-right text-[#0A4A4A] w-full md:max-w-full font-bold text-xl pr-4"
           type="number"
           placeholder="0"
+          min="0"
           onChange={(e) => {
             if (propType === "bill") {
               dispatch(setBill(Number(e.target.value)));
