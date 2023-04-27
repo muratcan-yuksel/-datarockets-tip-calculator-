@@ -29,7 +29,7 @@ const UserInput = ({ userValue, propType }: Props) => {
   const peopleValue = useSelector((state: RootState) => state.people.value);
   const dispatch = useDispatch();
   //give red outline if there are 0 people
-  const outlineClass =
+  const redOutline =
     propType !== "bill" && peopleValue === 0
       ? "  outline outline-[#d14721] outline-4"
       : "";
@@ -52,7 +52,7 @@ const UserInput = ({ userValue, propType }: Props) => {
         </div>
       </h2>
       <div
-        className={` bg-[#F3F8FB] flex justify-between items-center  w-full h-14 pl-4 rounded-md mb-7 ${outlineClass} `}
+        className={` bg-[#F3F8FB] flex justify-between items-center  w-full h-14 pl-4 rounded-md mb-7 hover:outline hover:outline-[#5DAAA2] ${redOutline}`}
       >
         {conditionalImage(propType)}
         <input

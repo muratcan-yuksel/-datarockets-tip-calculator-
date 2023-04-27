@@ -33,7 +33,7 @@ const SelectTip = () => {
         <input
           type="number"
           placeholder="Custom"
-          className="border-2 border-[#616D6D] rounded-md text-right mt-2 pr-2 h-[55px] text-[#616D6D] font-bold text-2xl md:text-sm lg:text-lg self-start"
+          className="border-2 border-[#616D6D] rounded-md text-right mt-2 pr-2 h-[55px] text-[#616D6D] font-bold text-2xl md:text-sm lg:text-lg self-start hover:outline hover:outline-[#5DAAA2]"
           onChange={(e) => {
             dispatch(setTip(Number(e.target.value)));
             setActiveTip(null);
