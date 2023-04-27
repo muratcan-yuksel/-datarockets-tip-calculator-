@@ -1,9 +1,39 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import type { RootState } from "../store/store";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  calculateTotalResult,
+  calculatePersonResult,
+} from "../features/slices/resultSlice.ts";
 
 const Output = () => {
+  const dispatch = useDispatch();
+  // const [totalTip, setTotalTip] = useState(0);
+  // const [personTip, setPersonTip] = useState(0);
+
+  const billValue = useSelector((state: RootState) => state.bill.value);
+  const tipValue = useSelector((state: RootState) => state.tip.value);
+  const peopleValue = useSelector((state: RootState) => state.people.value);
+  const totalResult = useSelector(
+    (state: RootState) => state.result.totalResult
+  );
+  const personResult = useSelector(
+    (state: RootState) => state.result.personResult
+  );
+
+  const handleCalculate = (bill: number, tip: number, people: number) => {
+    dispatch(calculateTotalResult({ bill, tip }));
+    dispatch(calculatePersonResult({ bill, tip, people }));
+  };
+
+  useEffect(() => {
+    handleCalculate(billValue, tipValue, peopleValue);
+    console.log(billValue, tipValue, peopleValue);
+    console.log(personResult, totalResult);
+  });
   const values = [
-    { title: "Tip Amount", amount: "$0.00" },
-    { title: "Total", amount: "$0.00" },
+    { title: "Tip Amount", amount: `$ ${personResult}` },
+    { title: "Total", amount: `$ ${totalResult}` },
   ];
   return (
     <div className="md:w-1/2 bg-[#00474B] rounded-2xl text-white font-bold flex flex-col   justify-center p-5">
