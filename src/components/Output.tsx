@@ -39,7 +39,7 @@ const Output = () => {
       return (
         <button
           type="button"
-          className="bg-[#26C2AD] self-center text-[#00474B] rounded-md w-10/12 h-14 text-2xl mt-5 "
+          className="bg-[#26C2AD] self-center text-[#00474B] rounded-md w-10/12 h-14 text-2xl mt-5 md:mt-40 "
           disabled
         >
           RESET
@@ -49,7 +49,7 @@ const Output = () => {
       return (
         <button
           onClick={resetValues}
-          className="bg-[#26C2AD] self-center text-[#00474B] rounded-md w-10/12 h-14 text-2xl mt-5 transform hover:scale-110 transition duration-300"
+          className="bg-[#26C2AD] self-center text-[#00474B] rounded-md w-10/12 h-14 text-2xl mt-5 md:mt-40 transform hover:scale-110 transition duration-300"
         >
           {" "}
           RESET
@@ -69,7 +69,7 @@ const Output = () => {
     { title: "Total", amount: `$ ${totalResult}` },
   ];
   return (
-    <div className="md:w-1/2 bg-[#00474B] rounded-2xl text-white font-bold flex flex-col   justify-center p-5">
+    <div className="md:w-1/2 md:h-full bg-[#00474B] rounded-2xl text-white font-bold flex flex-col   justify-center p-5 md:p-14">
       {values.map((value, index) => (
         <div key={index} className="flex justify-between my-5">
           <div>
