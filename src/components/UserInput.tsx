@@ -9,9 +9,9 @@ type Props = {
 
 const conditionalImage = (propType: Props["propType"]) => {
   return propType === "bill" ? (
-    <img src={dollarIcon} alt="dollar icon" className="h-5" />
+    <img src={dollarIcon} alt="dollar icon" className="h-6" />
   ) : (
-    <img src={personIcon} alt="person icon" className="h-5" />
+    <img src={personIcon} alt="person icon" className="h-6" />
   );
 };
 
@@ -19,16 +19,16 @@ const conditionalTitle = (propType: Props["propType"]) => {
   return propType === "bill" ? "Bill" : "Number of People";
 };
 
-const MyInput = ({ value, propType }: Props) => {
+const UserInput = ({ value, propType }: Props) => {
   return (
     <div className="flex flex-col items-center">
-      <h2 className="text-[#616D6D] font-bold self-start">
+      <h2 className="text-[#616D6D] font-bold self-start mb-2 mt-7">
         {conditionalTitle(propType)}
       </h2>
-      <div className=" bg-[#F3F8FB] flex justify-between items-center  w-full h-10 pl-4 rounded-md">
+      <div className=" bg-[#F3F8FB] flex justify-between items-center  w-full h-14 pl-4 rounded-md mb-7">
         {conditionalImage(propType)}
         <input
-          className="bg-[#F3F8FB] appearance-none text-right text-[#0A4A4A] font-bold"
+          className="bg-[#F3F8FB] appearance-none text-right text-[#0A4A4A] font-bold text-xl"
           type="number"
         />
       </div>
@@ -36,4 +36,4 @@ const MyInput = ({ value, propType }: Props) => {
   );
 };
 
-export default MyInput;
+export default UserInput;

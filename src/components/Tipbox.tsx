@@ -14,7 +14,7 @@ const Tipbox = ({ tip, activeTip, setActiveTip }: Props) => {
 
   const isActive = activeTip === tip;
 
-  const buttonClasses = `bg-[#00474B] m-2 p-2 text-white font-bold rounded-md min-w-[35%] max-w-md hover:bg-[#26C2AD] transition-transform duration-300 transform hover:scale-105 ${
+  const buttonClasses = `bg-[#00474B] m-2 p-2 text-white font-bold rounded-md min-w-[35%] h-14 max-w-md hover:bg-[#26C2AD] transition-transform duration-300 transform hover:scale-105 text-xl ${
     isActive ? "bg-[#26C2AD]" : ""
   }`;
 
