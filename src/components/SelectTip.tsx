@@ -5,11 +5,6 @@ import { setTip } from "../features/slices/tipSlice.ts";
 
 const tips: number[] = [5, 10, 15, 25, 50];
 
-// type ParentProps = {
-//   activeTip: number | null;
-//   setActiveTip: (tip: number | null) => void;
-// };
-
 const SelectTip = () => {
   const dispatch = useDispatch();
 

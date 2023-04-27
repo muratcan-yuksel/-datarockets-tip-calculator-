@@ -23,7 +23,7 @@ const conditionalTitle = (propType: Props["propType"]) => {
   return propType === "bill" ? "Bill" : "Number of People";
 };
 
-const UserInput = ({ userValue, propType }: Props) => {
+const UserInput = ({ propType }: Props) => {
   const peopleValue = useSelector((state: RootState) => state.people.value);
   const dispatch = useDispatch();
   //give red outline if there are 0 people
@@ -66,7 +66,7 @@ const UserInput = ({ userValue, propType }: Props) => {
               dispatch(setResetFalse());
             }
           }}
-          value={resetValue ? 0 : userValue}
+          value={resetValue ? 0 : undefined}
         />
       </div>
     </div>

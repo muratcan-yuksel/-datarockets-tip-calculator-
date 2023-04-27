@@ -12,9 +12,6 @@ import { setResetTrue } from "../features/slices/resetSlice.ts";
 
 const Output = () => {
   const dispatch = useDispatch();
-  // const [totalTip, setTotalTip] = useState(0);
-  // const [personTip, setPersonTip] = useState(0);
-
   const billValue = useSelector((state: RootState) => state.bill.value);
   const tipValue = useSelector((state: RootState) => state.tip.value);
   const peopleValue = useSelector((state: RootState) => state.people.value);
