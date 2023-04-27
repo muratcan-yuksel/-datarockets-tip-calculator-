@@ -14,11 +14,9 @@ export const resetSlice = createSlice({
   reducers: {
     setResetTrue: (state) => {
       state.value = true;
-      console.log("resetSlice: setResetTrue: state.value: ", state.value);
     },
     setResetFalse: (state) => {
       state.value = false;
-      console.log("resetSlice: setResetFalse: state.value: ", state.value);
     },
   },
 });

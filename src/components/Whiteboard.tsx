@@ -1,4 +1,3 @@
-import React from "react";
 import Input from "./Input.tsx";
 import Output from "./Output.tsx";
 

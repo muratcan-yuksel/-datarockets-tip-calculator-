@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useEffect } from "react";
 import type { RootState } from "../store/store";
 import { useSelector, useDispatch } from "react-redux";
 import {

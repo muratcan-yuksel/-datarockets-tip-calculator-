@@ -1,6 +1,4 @@
-import React, { useState } from "react";
-import type { RootState } from "../store/store";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setTip } from "../features/slices/tipSlice.ts";
 
 type Props = {

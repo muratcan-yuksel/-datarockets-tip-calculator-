@@ -1,11 +1,10 @@
-import React, { useRef, useEffect } from "react";
 import dollarIcon from "../assets/images/icon-dollar.svg";
 import personIcon from "../assets/images/icon-person.svg";
 import type { RootState } from "../store/store";
 import { useSelector, useDispatch } from "react-redux";
 import { setBill } from "../features/slices/billSlice.ts";
 import { setPeople } from "../features/slices/peopleSlice.ts";
-import resetSlice, { setResetFalse } from "../features/slices/resetSlice.ts";
+import { setResetFalse } from "../features/slices/resetSlice.ts";
 
 type Props = {
   userValue: number;

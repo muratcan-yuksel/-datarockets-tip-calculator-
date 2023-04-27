@@ -15,7 +15,6 @@ export const tipSlice = createSlice({
   reducers: {
     setTip: (state, action: PayloadAction<number>) => {
       state.value = action.payload;
-      console.log("tipSlice: setTip: state.value: ", state.value);
     },
   },
 });

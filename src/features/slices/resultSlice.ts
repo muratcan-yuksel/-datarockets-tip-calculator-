@@ -21,10 +21,6 @@ export const resultSlice = createSlice({
     ) => {
       const { bill, tip } = action.payload;
       state.totalResult = bill * (tip / 100);
-      console.log(
-        "resultSlice: calculateTotalResult: state.totalResult: ",
-        state.totalResult
-      );
     },
     calculatePersonResult: (
       state,
@@ -32,10 +28,6 @@ export const resultSlice = createSlice({
     ) => {
       const { bill, tip, people } = action.payload;
       state.personResult = Number(((bill * (tip / 100)) / people).toFixed(2));
-      console.log(
-        "resultSlice: calculatePersonResult: state.personResult: ",
-        state.personResult
-      );
     },
   },
 });

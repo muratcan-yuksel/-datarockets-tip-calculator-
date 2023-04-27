@@ -1,4 +1,3 @@
-import React from "react";
 import Whiteboard from "./components/Whiteboard";
 import logo from "./assets/images/logo.svg";
 
