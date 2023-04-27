@@ -28,7 +28,7 @@ const UserInput = ({ value, propType }: Props) => {
       <div className=" bg-[#F3F8FB] flex justify-between items-center  w-full h-14 pl-4 rounded-md mb-7">
         {conditionalImage(propType)}
         <input
-          className="bg-[#F3F8FB] appearance-none text-right text-[#0A4A4A] font-bold text-xl"
+          className="bg-[#F3F8FB] appearance-none text-right text-[#0A4A4A] w-full md:max-w-full font-bold text-xl pr-4"
           type="number"
         />
       </div>
