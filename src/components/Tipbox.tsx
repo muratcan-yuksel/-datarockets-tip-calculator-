@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import type { RootState } from "../store/store";
+import { useSelector, useDispatch } from "react-redux";
+import { setTip } from "../features/slices/tipSlice.ts";
 
 type Props = {
   tip: number;
@@ -7,9 +10,11 @@ type Props = {
 };
 
 const Tipbox = ({ tip, activeTip, setActiveTip }: Props) => {
+  const dispatch = useDispatch();
   const handleClick = () => {
     setActiveTip(tip === activeTip ? null : tip);
     console.log(tip);
+    dispatch(setTip(tip));
   };
 
   const isActive = activeTip === tip;

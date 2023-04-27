@@ -7,8 +7,8 @@ const Output = () => {
   ];
   return (
     <div className="md:w-1/2 bg-[#00474B] rounded-2xl text-white font-bold flex flex-col   justify-center p-5">
-      {values.map((value) => (
-        <div className="flex justify-between my-5">
+      {values.map((value, index) => (
+        <div key={index} className="flex justify-between my-5">
           <div>
             <h2> {value.title} </h2>
             <h3 className="text-[#77adb0]">/ person</h3>

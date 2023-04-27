@@ -1,9 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import billReducer from "../features/slices/billSlice";
+import peopleReducer from "../features/slices/peopleSlice";
+import tipReducer from "../features/slices/tipSlice";
 
 export const store = configureStore({
   reducer: {
     bill: billReducer,
+    people: peopleReducer,
+    tip: tipReducer,
   },
 });
 

@@ -24,7 +24,7 @@ const conditionalTitle = (propType: Props["propType"]) => {
 };
 
 const UserInput = ({ value, propType }: Props) => {
-  const count = useSelector((state: RootState) => state.bill.value);
+  const billValue = useSelector((state: RootState) => state.bill.value);
   const dispatch = useDispatch();
   return (
     <div className="flex flex-col items-center">

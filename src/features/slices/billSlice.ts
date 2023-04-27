@@ -15,6 +15,7 @@ export const billSlice = createSlice({
   reducers: {
     setBill: (state, action: PayloadAction<number>) => {
       state.value = action.payload;
+      console.log("billSlice: setBill: state.value: ", state.value);
     },
   },
 });

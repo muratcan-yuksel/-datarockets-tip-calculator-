@@ -15,6 +15,7 @@ export const peopleSlice = createSlice({
   reducers: {
     setPeople: (state, action: PayloadAction<number>) => {
       state.value = action.payload;
+      console.log("peopleSlice: setPeople: state.value: ", state.value);
     },
   },
 });
