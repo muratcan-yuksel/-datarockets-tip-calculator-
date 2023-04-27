@@ -6,7 +6,7 @@ const Output = () => {
     { title: "Total", amount: "$0.00" },
   ];
   return (
-    <div className="bg-[#00474B] rounded-2xl text-white font-bold flex flex-col  justify-center p-5">
+    <div className="md:w-1/2 bg-[#00474B] rounded-2xl text-white font-bold flex flex-col   justify-center p-5">
       {values.map((value) => (
         <div className="flex justify-between my-5">
           <div>
