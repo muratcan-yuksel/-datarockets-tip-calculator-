@@ -5,9 +5,10 @@ import type { RootState } from "../store/store";
 import { useSelector, useDispatch } from "react-redux";
 import { setBill } from "../features/slices/billSlice.ts";
 import { setPeople } from "../features/slices/peopleSlice.ts";
+import resetSlice, { setResetFalse } from "../features/slices/resetSlice.ts";
 
 type Props = {
-  value: number;
+  userValue: number;
   propType: "bill" | "people";
 };
 
@@ -23,7 +24,7 @@ const conditionalTitle = (propType: Props["propType"]) => {
   return propType === "bill" ? "Bill" : "Number of People";
 };
 
-const UserInput = ({ value, propType }: Props) => {
+const UserInput = ({ userValue, propType }: Props) => {
   const billValue = useSelector((state: RootState) => state.bill.value);
   const peopleValue = useSelector((state: RootState) => state.people.value);
   const dispatch = useDispatch();
@@ -33,11 +34,14 @@ const UserInput = ({ value, propType }: Props) => {
       ? "  outline outline-[#d14721] outline-4"
       : "";
 
+  const resetValue = useSelector((state: RootState) => state.reset.value);
+
   const zeroError = (propType: Props["propType"]) => {
     if (propType !== "bill" && peopleValue === 0) {
       return "Cant be zero";
     }
   };
+
   return (
     <div className="flex w-full flex-col items-center">
       <h2 className="w-full text-[#616D6D] font-bold self-start mb-2 mt-7">
@@ -58,10 +62,13 @@ const UserInput = ({ value, propType }: Props) => {
           onChange={(e) => {
             if (propType === "bill") {
               dispatch(setBill(Number(e.target.value)));
+              dispatch(setResetFalse());
             } else if (propType === "people") {
               dispatch(setPeople(Number(e.target.value)));
+              dispatch(setResetFalse());
             }
           }}
+          value={resetValue ? 0 : userValue}
         />
       </div>
     </div>

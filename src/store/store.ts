@@ -3,6 +3,7 @@ import billReducer from "../features/slices/billSlice";
 import peopleReducer from "../features/slices/peopleSlice";
 import tipReducer from "../features/slices/tipSlice";
 import resultReducer from "../features/slices/resultSlice";
+import resetReducer from "../features/slices/resetSlice";
 
 export const store = configureStore({
   reducer: {
@@ -10,6 +11,7 @@ export const store = configureStore({
     people: peopleReducer,
     tip: tipReducer,
     result: resultReducer,
+    reset: resetReducer,
   },
 });
 
